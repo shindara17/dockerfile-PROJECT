@@ -25,11 +25,9 @@ pipeline {
     
     stage('Build Docker image') {
           steps{
-                script {
-                     dockerImage = "docker build -t $imagename:$BUILD_NUMBER"
+                    sh "dockerImage = docker build -t $imagename:$BUILD_NUMBER"
                           }
                       }
-                }
 
      stage('Push Docker Image to DockerHub') {
            steps{
