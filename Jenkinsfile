@@ -23,12 +23,14 @@ pipeline {
             }
         }
     
-    stage('Build Docker image') {
+      stage('Build Docker image') {
           steps{
-              sh "docker build -t $imagename:$BUILD_NUMBER"
-            
+                script {
+                     dockerImage = docker.build imagename
+                     dockerImage = docker.tag imagename imagename:$BUILD_NUMBER
                           }
                       }
+                }
 
      stage('Push Docker Image to DockerHub') {
            steps{
