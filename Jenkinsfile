@@ -3,7 +3,7 @@ pipeline {
 
   environment {
        imagename = "tkibnyusuf/customizetomcatimage"
-       registryCredential = 'DockerHub'
+       registryCredential = 'dockerpass'
        dockerImage = ''
            }
 
