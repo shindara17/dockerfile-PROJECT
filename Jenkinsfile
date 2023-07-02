@@ -2,11 +2,12 @@ pipeline {
   agent any
 
   environment {
-       imagename = "tkibnyusuf/customizetomcatimage"
-       registryCredential = 'dockerpass'
+       imagename = "tkibnyusuf/convotomcatapp"
+       registryCredential = 'DockerHub'
        dockerImage = ''
            }
 
+  
   stages {
 
     stage ('Build') {
