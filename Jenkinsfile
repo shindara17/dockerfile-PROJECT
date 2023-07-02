@@ -26,6 +26,7 @@ pipeline {
     stage('Build Docker image') {
           steps{
               sh "docker build -t $imagename:$BUILD_NUMBER" docker_cloud_convo/Dockerfile
+            
                           }
                       }
 
