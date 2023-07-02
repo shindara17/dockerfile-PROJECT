@@ -27,7 +27,7 @@ pipeline {
           steps{
                 script {
                      dockerImage = docker.build imagename
-                     dockerImage = docker.tag imagename imagename:$BUILD_NUMBER
+                     docker.tag dockerImage dockerImage:$BUILD_NUMBER
                           }
                       }
                 }
