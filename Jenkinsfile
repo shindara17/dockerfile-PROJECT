@@ -3,7 +3,7 @@ pipeline {
 
   environment {
        imagename = "tkibnyusuf/convotomcatapp"
-       registryCredential = '	Dockerhub'
+       registryCredential = 'Dockerhub'
        dockerImage = ''
            }
 
