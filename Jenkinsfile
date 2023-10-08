@@ -2,8 +2,8 @@ pipeline {
   agent any
 
   environment {
-       imagename = "tkibnyusuf/convotomcatapp"
-       registryCredential = 'Dockerhub'
+       imagename = "tkibnyusuf/julyjavaimage"
+       registryCredential = 'Docker-hub'
        dockerImage = ''
            }
 
@@ -24,7 +24,7 @@ pipeline {
             }
         }
     
-      stage('Build Docker image') {
+      stage('Build Docker image') { 
           steps{
                 script {
                    dockerImage = docker.build imagename + ":$BUILD_NUMBER"
