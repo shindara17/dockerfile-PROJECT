@@ -3,7 +3,7 @@ pipeline {
 
   environment {
        imagename = "tkibnyusuf/julyjavaimage"
-       registryCredential = 'Docker-hub'
+       registryCredential = 'docker-pass'
        dockerImage = ''
            }
 
