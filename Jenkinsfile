@@ -27,7 +27,7 @@ pipeline {
       stage('Build Docker image') { 
           steps{
                 script {
-                   dockerImage = docker.build imagename + ":$BUILD_NUMBER"
+                   dockerImage = docker.build shindara17/docker-file + ":$BUILD_NUMBER"
                           }
                       }
                 }
